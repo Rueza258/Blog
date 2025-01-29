@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog.Sany - Música & Emoção</title>
+    <style>
+        /* Fonte personalizada */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background-color: #121212;
+            color: #eaeaea;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        /* Navegação */
+        nav {
+            background-color: #1e1e1e;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2em;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            color: #6a11cb;
+            transform: scale(1.1);
+        }
+
+        /* Seção Hero */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: url('fundo.jpg') no-repeat center center/cover;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            background: rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+
+        /* Container Geral */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            animation: slideUp 1s ease-in-out;
+        }
+
+        /* Seção de Músicas */
+        .music-item {
+            display: flex;
+            align-items: center;
+            background: #1e1e1e;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .music-item:hover {
+            transform: scale(1.03);
+        }
+
+        .music-item img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .music-info h3 {
+            margin: 0;
+            color: #6a11cb;
+        }
+
+        .music-actions {
+            flex: 1;
+            text-align: right;
+        }
+
+        .music-actions a, .music-actions button {
+            text-decoration: none;
+            color: white;
+            background: #6a11cb;
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .music-actions a:hover, .music-actions button:hover {
+            background: #2575fc;
+        }
+
+        /* Blog */
+        .blog-post {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .blog-post h3 {
+            color: #6a11cb;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            background: #1e1e1e;
+            color: #b3b3b3;
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blog.Sany</h1>
+        <p>Onde a música e as emoções se encontram</p>
+    </header>
+
+    <nav>
+        <a href="#musicas">Músicas</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#blog">Blog</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <section class="hero">
+        <h2>Descubra novas músicas e emoções!</h2>
+    </section>
+
+    <div class="container">
+        <h2 id="musicas">Músicas</h2>
+
+        <div class="music-item">
+            <img src="capa-musica1.jpg" alt="Capa da Música">
+            <div class="music-info">
+                <h3>Nome da Música 1</h3>
+                <p>Artista: Artista 1</p>
+            </div>
+            <div class="music-actions">
+                <a href="musica1.mp3" download>Baixar</a>
+                <button>Curtir</button>
+            </div>
+        </div>
+
+        <div class="music-item">
+            <img src="capa-musica2.jpg" alt="Capa da Música">
+            <div class="music-info">
+                <h3>Nome da Música 2</h3>
+                <p>Artista: Artista 2</p>
+            </div>
+            <div class="music-actions">
+                <a href="musica2.mp3" download>Baixar</a>
+                <button>Curtir</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 id="blog">Blog</h2>
+        <div class="blog-post">
+            <h3>Nova Música Lançada!</h3>
+            <p>Descubra a nova faixa que acabamos de lançar...</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 id="sobre">Sobre</h2>
+        <p>O Blog.Sany foi criado para trazer emoções através da música...</p>
+    </div>
+
+    <div class="container">
+        <h2 id="contato">Contato</h2>
+        <p>Email: contato@blogsany.com</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Blog.Sany - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
